@@ -8,6 +8,9 @@ import Dashboard from "./pages/Dashboard";
 import Upload from "./pages/Upload";
 import Reports from "./pages/Reports";
 import AuditModules from "./pages/AuditModules";
+import LoanClassification from "./pages/audit/LoanClassification";
+import ComplianceCheck from "./pages/audit/ComplianceCheck";
+import LedgerAnomalies from "./pages/audit/LedgerAnomalies";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +26,9 @@ const App = () => (
             <Route path="/" element={<Dashboard />} />
             <Route path="/upload" element={<Upload />} />
             <Route path="/audit" element={<AuditModules />} />
+            <Route path="/audit/loans" element={<LoanClassification />} />
+            <Route path="/audit/compliance" element={<ComplianceCheck />} />
+            <Route path="/audit/ledger" element={<LedgerAnomalies />} />
             <Route path="/reports" element={<Reports />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
